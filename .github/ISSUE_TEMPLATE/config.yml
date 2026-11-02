@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: IronCircles board (search here first)
+    url: https://github.com/users/ironcircles/projects/1
+    about: Every open bug and task across all IronCircles repos.

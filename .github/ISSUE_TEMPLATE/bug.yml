@@ -1,0 +1,51 @@
+name: Bug
+description: Something is broken. Search open issues first so two people don't fix the same bug.
+labels: ["bug"]
+projects: ["ironcircles/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before filing:** search the [IronCircles board](https://github.com/users/ironcircles/projects/1) for this bug.
+        If it is already there, comment on it instead of opening a new one.
+        **Before fixing:** assign yourself. An assigned issue is taken; ask the assignee before working on it.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - ironcore (shared core, packages/ironcore)
+        - ironsocial (IronCircles app)
+        - ironvault
+        - ironcode
+        - ironapi (server)
+        - ironchan web
+        - ironweb (www.ironcircles.com)
+        - deploy / infrastructure
+        - not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+  - type: input
+    id: where
+    attributes:
+      label: Platform / build
+      placeholder: "e.g. iOS 26 TestFlight 1.4.2, macOS debug, Android sideload, prod / QA"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      render: text

@@ -1,0 +1,17 @@
+name: Task / feature
+description: Planned work that is not a bug.
+projects: ["ironcircles/1"]
+body:
+  - type: markdown
+    attributes:
+      value: Assign yourself before you start, so nobody else picks it up.
+  - type: textarea
+    id: what
+    attributes:
+      label: What and why
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
